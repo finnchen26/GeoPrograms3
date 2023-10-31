@@ -13,9 +13,8 @@ public class Project extends World {
         plane.teleport(82, 87);
         plane.pausetime = 0;
 
-
         field();
-
+        outline();
 
 
     }
@@ -50,12 +49,23 @@ public class Project extends World {
                     plane.setColor(20 * g, 200 / g, 50);
                     plane.circle(200 / g);
                     plane.circle(20 * g);
-                }
 
+
+                }
 
             }
 
         }
     }
+
+    public void outline(){
+        for (int x = 10; x > 0; x--) {  //x determines x-axis, z determines y-axis
+
+            plane.setColor(x * 15, x, 230/x);
+            plane.circle(10 * x);
+            }
+
+    }
+
 
 }
